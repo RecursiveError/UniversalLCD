@@ -193,7 +193,7 @@ UniversalLCD& UniversalLCD::selectLcd(uint8_t enable){
 }
 
 UniversalLCD& UniversalLCD::write(const char* text){
-    for(int i = 0; i < 8; i++){
+    for(int i = 0; text[i] != '\0' ; i++){
         send(text[i], 1);
     }
     return *this;
