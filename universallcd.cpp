@@ -20,7 +20,7 @@ void UniversalLCD::send4Bits(uint8_t data, uint8_t RS_state){
     send8Bits(low_nibble, RS_state);
 }
 
-void UniversalLCD::send(uint8_t data, uint8_t RS_state){
+UniversalLCD& UniversalLCD::send(uint8_t data, uint8_t RS_state){
     if(bus == Bus8Bits){
         send8Bits(data, RS_state);
     }else{
@@ -33,6 +33,7 @@ void UniversalLCD::send(uint8_t data, uint8_t RS_state){
     else{
         delay(40);
     }
+    return *this;
 }
 
 UniversalLCD& UniversalLCD::begin(){

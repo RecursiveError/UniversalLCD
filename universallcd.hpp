@@ -60,7 +60,6 @@ class UniversalLCD{
 
         void send4Bits(uint8_t data, uint8_t RS_state);
         void send8Bits(uint8_t data, uint8_t RS_state);
-        void send(uint8_t data, uint8_t RS_state);
 
     public:
         /// @brief class constructor
@@ -80,6 +79,10 @@ class UniversalLCD{
             }
             function_set = 0x20 | 0x08 | bus | size;
         }
+        /// @brief low level send function
+        /// @param data - data to send
+        /// @param RS_state 0 = command / 1 - text
+        UniversalLCD& send(uint8_t data, uint8_t RS_state);
 
         /// @brief Starts the display
         UniversalLCD& begin();
