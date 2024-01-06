@@ -202,6 +202,10 @@ UniversalLCD& UniversalLCD::write_char_delimiter(const char text[], char delimit
 
 
 UniversalLCD& UniversalLCD::write_limit(const char text[], unsigned int size){
+    for(int i = 0; i < size ; i++){
+        send(text[i], 1);
+    }
+    return *this;
 }
 
 UniversalLCD& UniversalLCD::write(const char text[]){
