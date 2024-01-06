@@ -158,6 +158,8 @@ class UniversalLCD{
 
         /// @brief send a text to the LCD
         /// @param text c-string
+        UniversalLCD& UniversalLCD::write_limit(const char text[], unsigned int size);
+        UniversalLCD& UniversalLCD::write_char_delimiter(const char text[], char delimiter);
         UniversalLCD& write(const char* text);
     };
 

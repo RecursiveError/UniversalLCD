@@ -193,11 +193,19 @@ UniversalLCD& UniversalLCD::selectLcd(uint8_t enable){
     return *this;
 }
 
-UniversalLCD& UniversalLCD::write(const char* text){
-    for(int i = 0; text[i] != '\0' ; i++){
+UniversalLCD& UniversalLCD::write_char_delimiter(const char text[], char delimiter){
+    for(int i = 0; text[i] != delimiter ; i++){
         send(text[i], 1);
     }
     return *this;
+}
+
+
+UniversalLCD& UniversalLCD::write_limit(const char text[], unsigned int size){
+}
+
+UniversalLCD& UniversalLCD::write(const char text[]){
+    return write_char_delimiter(text, '\0');
 }
 
 }
