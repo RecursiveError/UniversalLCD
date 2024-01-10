@@ -37,7 +37,7 @@ UniversalLCD& UniversalLCD::send(uint8_t data, uint8_t RS_state){
 }
 
 UniversalLCD& UniversalLCD::begin(){
-    delay(15000);
+    delay(55000); //change 2024-01-10 (add power on wait time + init time) (datasheet: power up time = mora than 40ms| begin time = more than 15ms)
     send8Bits(0x30, 0);
     delay(4100);
     send8Bits(0x30, 0);
