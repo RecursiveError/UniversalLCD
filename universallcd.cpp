@@ -94,7 +94,7 @@ inline UniversalLCD& UniversalLCD::moveDisplayLeft(){
 }
 
 inline UniversalLCD& UniversalLCD::moveDisplayRight(){
-    command(LCDShiftCursotRight);
+    command(LCDShiftDisplayRight);
     return *this;
 }
 
