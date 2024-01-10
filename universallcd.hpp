@@ -42,7 +42,7 @@ enum CharSize {
 };
 
 /// @brief delay callback type
-using delayUs = void(*)(uint16_t);
+using delayUs = void(*)(uint32_t);
 
 /// @brief UniversalLCD main class
 class UniversalLCD{
