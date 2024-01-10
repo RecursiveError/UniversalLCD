@@ -61,7 +61,7 @@ UniversalLCD& UniversalLCD::begin(){
 /* ----------------- DISPLAY COMMANDS ---------------------*/
 
 
-inline UniversalLCD& UniversalLCD::command(Command command){
+ UniversalLCD& UniversalLCD::command(Command command){
     send(command, 0);
     return *this;
 }
@@ -78,22 +78,22 @@ UniversalLCD& UniversalLCD::reset(){
     return *this;
 }
 
-inline UniversalLCD& UniversalLCD::moveCursorLeft(){
+ UniversalLCD& UniversalLCD::moveCursorLeft(){
     command(LCDShiftCursotLeft);
     return *this;
 }
 
-inline UniversalLCD& UniversalLCD::moveCursorRight(){
+ UniversalLCD& UniversalLCD::moveCursorRight(){
     command(LCDShiftCursotRight);
     return *this;
 }
 
-inline UniversalLCD& UniversalLCD::moveDisplayLeft(){
+ UniversalLCD& UniversalLCD::moveDisplayLeft(){
     command(LCDShiftDisplayLeft);
     return *this;
 }
 
-inline UniversalLCD& UniversalLCD::moveDisplayRight(){
+ UniversalLCD& UniversalLCD::moveDisplayRight(){
     command(LCDShiftDisplayRight);
     return *this;
 }
